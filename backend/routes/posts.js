@@ -63,7 +63,7 @@ router.put('/:id', multer({ storage: storage }).single('image'), (req, res, next
     });
   });
 });
-
+//
 router.get('', (req, res, next) => {
   const pageSize = +req.query.pageSize;
   const currentPage = +req.query.page;
