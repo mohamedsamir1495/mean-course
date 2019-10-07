@@ -1,27 +1,37 @@
-# MeanCourse
+# MeanCourse App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+- This project was created by me to investigate Angular framework and how it can work with node as i have always been a MERN Developer not a Mean Developer
 
-## Development server
+# Structure and how to deploy the app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- This application is divided into 2 apps
 
-## Code scaffolding
+  - A backend app written in Javascript using **NodeJS** and integrated with a remote **MongoDB** Database
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    - To run the backend just write in the terminal `npm run start:server`
 
-## Build
+  - A Frontend app written in typescript using **Angular** version 8
+    - To run the Frontend just write in the terminal `npm run start:server`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Features applied in the Angular App
 
-## Running unit tests
+- Using Angular Material Design for decent a UI
+- Applying both Reactive approach and Form approach in creating and validating form
+- Using Angular Router for managing frontend routes
+- Using Lazy Loading for the routes by making a route file for each module and just importing it in the app-route file
+- Using Angular guard to prevent accessing Application routes when user is not authenticated
+- Using Angular interceptor to add JWT TOKEN for each HTTP Request going from the App to the Server
+- Using Angular interceptor for error handling
+- Implementing Image upload to remote server and MIME-Verification for the image file before it is uploaded to the server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Features applied in the NodeJS App
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Integration with Remote MongoDB
+- Encrypting passwords using bycrypt
+- Validation for each Route Access Using The `JWT` token Sent
+- Validation for the uploaded images and saving it on the server
+- Handling invalid route access
+- Handling unauthorized route requests
+- Handling inserting unique records in the users table in MongoDB using `mongoose-unique-validator`
+- Handling pagination requests
+- Handling CORS Error
